@@ -23,3 +23,16 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
+$databases['default']['default'] = array (
+  'database' => 'samplefsc3',
+  'username' => 'root',
+  'password' => '',
+  'prefix' => '',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = 'Rf-1SeVHb5im1GjuSfF0CPNiXHTPd7rfFMzNRnWZ4RHRDrRUHhrqPFLxza8SUFbNf4e20k5oCg';
+
+$settings['config_sync_directory'] = 'config/sync';
