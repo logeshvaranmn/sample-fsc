@@ -1,0 +1,22 @@
+uuid: 752414d0-787d-4c4f-b84b-ea1e22a3eb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fsc_region
+id: node.fsc_region.promote
+field_name: promote
+entity_type: node
+bundle: fsc_region
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
