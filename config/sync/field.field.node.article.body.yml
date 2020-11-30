@@ -1,16 +1,18 @@
-uuid: 37402dc2-e1cf-47eb-a5ec-6d9d409add21
+uuid: 99ce19a3-6cff-41a4-a617-7cb76619a7e3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.fsc_region
+    - node.type.article
   module:
     - text
-id: node.fsc_region.body
+_core:
+  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
+id: node.article.body
 field_name: body
 entity_type: node
-bundle: fsc_region
+bundle: article
 label: Body
 description: ''
 required: false

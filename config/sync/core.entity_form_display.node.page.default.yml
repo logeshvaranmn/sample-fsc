@@ -1,28 +1,30 @@
-uuid: acc3a575-7381-4320-a88f-f3b688dcb56c
+uuid: 0e5b95fe-24c1-4f29-b962-d34e99019e95
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.fsc_region.body
-    - node.type.fsc_region
+    - field.field.node.page.body
+    - node.type.page
   module:
     - path
     - text
-id: node.fsc_region.default
+_core:
+  default_config_hash: AD_lefuYmjsKeH3OQApsyP_nLj6ZnGaALznLQSQ0Z_o
+id: node.page.default
 targetEntityType: node
-bundle: fsc_region
+bundle: page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 31
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -67,11 +69,11 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }

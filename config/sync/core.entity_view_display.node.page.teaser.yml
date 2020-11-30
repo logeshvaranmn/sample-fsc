@@ -1,30 +1,30 @@
-uuid: ae58a778-3b9a-4c18-9ea3-11e9428ca45b
+uuid: 5d7348f8-5b4b-4745-98f6-a44988aeaa75
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.fsc_region.body
-    - node.type.fsc_region
+    - field.field.node.page.body
+    - node.type.page
   module:
     - text
     - user
-id: node.fsc_region.teaser
+_core:
+  default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
+id: node.page.teaser
 targetEntityType: node
-bundle: fsc_region
+bundle: page
 mode: teaser
 content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 100
+    region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
   links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    weight: 101
     region: content
 hidden: {  }
