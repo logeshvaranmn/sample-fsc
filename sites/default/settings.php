@@ -24,3 +24,6 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 
+$settings['hash_salt'] = 'Rf-1SeVHb5im1GjuSfF0CPNiXHTPd7rfFMzNRnWZ4RHRDrRUHhrqPFLxza8SUFbNf4e20k5oCg';
+
+$settings['config_sync_directory'] = 'config/sync';
