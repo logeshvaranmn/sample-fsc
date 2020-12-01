@@ -1,0 +1,6 @@
+name: FSC Content Type
+description: 'creating fsc content type.'
+type: module
+package: Custom
+core_version_requirement: ^8
+version: '8.x-1.0'
