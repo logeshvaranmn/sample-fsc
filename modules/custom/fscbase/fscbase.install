@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\Core\Config\FileStorage;
+
+
+function _fscbase_update_config($configsNames) {
+  $config_path = drupal_get_path('module', 'fscbase') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_factory = \Drupal::configFactory();
+  $uuid_service = \Drupal::service('uuid');
+
+  foreach ($configsNames as $name) {
+    $config_storage->write($name, $source->read($name));
+    $config_factory->getEditable($name)->set('uuid', $uuid_service->generate())->save();
+  }
+}
+
+/**
+ *  Adding 'Location' Text field.
+ */
+function fscbase_update_8101() {
+
+  $files = [
+    'field.storage.node.field_location',
+    'field.field.node.field_location',
+    'core.entity_form_display.node.fsc_region.default',
+    'core.entity_view_display.node.fsc_region.default'
+  ];
+  _fscbase_update_config($configsNames); 
+}

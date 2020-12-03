@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.fsc_region.body
+    - field.field.node.fsc_region.field_location
     - node.type.fsc_region
   module:
     - text
@@ -18,6 +19,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   links:
     weight: 100

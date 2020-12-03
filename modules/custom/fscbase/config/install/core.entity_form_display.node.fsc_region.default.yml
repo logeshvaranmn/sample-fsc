@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.fsc_region.body
+    - field.field.node.fsc_region.field_location
     - node.type.fsc_region
   module:
     - path
@@ -28,6 +29,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_location:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   path:
     type: path
     weight: 30
